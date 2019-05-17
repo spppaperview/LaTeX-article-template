@@ -886,7 +886,7 @@ FUNCTION {multi.page.check}
       and
     }
     { t #1 #1 substring$
-      duplicate$ "-" =
+      duplicate$ "DONOTDASHIFY-" =
       swap$ duplicate$ "," =
       swap$ "+" =
       or or
