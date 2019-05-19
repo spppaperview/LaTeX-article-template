@@ -1242,6 +1242,7 @@ FUNCTION {incollection}
 FUNCTION {inproceedings}
 { output.bibitem
   format.authors "author" output.check
+    format.title "title" output.check
   author format.key output
   crossref missing$
     { format.in.ed.booktitle "booktitle" output.check 
