@@ -100,7 +100,7 @@
 \fancyhf[c]{ }
 \fancyhf[r]{ }
 \fancyfoot[l]{}
-\fancyfoot[c]{Proceedings of the Samahang Pisika ng Pilipinas \\ \spp\,SPP Physics Conference\\ \sppvenue, \sppdate \\ \articlenum 1}
+\fancyfoot[c]{\href{https://paperview.spp-online.org/proceedings/issue/archive}{Proceedings of the Samahang Pisika ng Pilipinas} \\ \href{https://paperview.spp-online.org/proceedings/issue/view/SPP-2020}{\spp\,Samahang Pisika ng Pilipinas Physics Conference}\\ \sppvenue, \sppdate \\ \articlenum 1}
 \fancyfoot[r]{}
 }
 
@@ -111,7 +111,7 @@
 \fancyhf[r]{}
 \fancyhf[c]{}
 \fancyfoot[l]{}
-\fancyfoot[c]{Proceedings of the Samahang Pisika ng Pilipinas \\ \spp\,SPP Physics Conference\\ \sppvenue, \sppdate \\ \articlenum \thepage}
+\fancyfoot[c]{\href{https://paperview.spp-online.org/proceedings/issue/archive}{Proceedings of the Samahang Pisika ng Pilipinas}  \\ \href{https://paperview.spp-online.org/proceedings/issue/view/SPP-2020}{\spp\,Samahang Pisika ng Pilipinas Physics Conference}\\ \sppvenue, \sppdate \\ \articlenum \thepage}
 \fancyfoot[r]{}
 \pagestyle{fancy}
 
