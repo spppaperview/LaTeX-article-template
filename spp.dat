@@ -101,7 +101,7 @@
 \fancyhf[c]{ }
 \fancyhf[r]{ }
 \fancyfoot[l]{}
-\fancyfoot[c]{\href{https://proceedings.spp-online.org/issue/archive}{Proceedings of the Samahang Pisika ng Pilipinas} \\ \href{https://proceedings.spp-online.org/issue/view/SPP-2021}{\spp\,Samahang Pisika ng Pilipinas Physics Conference}\\ \sppvenue, \sppdate \\ \articlenum 1}
+\fancyfoot[c]{\href{https://proceedings.spp-online.org/issue/archive}{Proceedings of the Samahang Pisika ng Pilipinas} \\ \href{https://proceedings.spp-online.org/issue/view/SPP-2021}{\spp\,Samahang Pisika ng Pilipinas Physics Conference}\\ \sppvenue \sppdate \\ \articlenum 1}
 \fancyfoot[r]{}
 }
 
@@ -112,7 +112,7 @@
 \fancyhf[r]{}
 \fancyhf[c]{}
 \fancyfoot[l]{}
-\fancyfoot[c]{\href{https://proceedings.spp-online.org/issue/archive}{Proceedings of the Samahang Pisika ng Pilipinas}  \\ \href{https://proceedings.spp-online.org/issue/view/SPP-2021}{\spp\,Samahang Pisika ng Pilipinas Physics Conference}\\ \sppvenue, \sppdate \\ \articlenum \thepage}
+\fancyfoot[c]{\href{https://proceedings.spp-online.org/issue/archive}{Proceedings of the Samahang Pisika ng Pilipinas}  \\ \href{https://proceedings.spp-online.org/issue/view/SPP-2021}{\spp\,Samahang Pisika ng Pilipinas Physics Conference}\\ \sppvenue \sppdate \\ \articlenum \thepage}
 \fancyfoot[r]{}
 \pagestyle{fancy}
 
