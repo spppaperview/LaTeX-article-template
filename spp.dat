@@ -17,10 +17,10 @@
 \topmargin=-2cm
 
 % SPP details
-\newcommand{\spp}{40\textsuperscript{th}}
-\newcommand{\sppvenue}{}
+\newcommand{\spp}{41\textsuperscript{st}}
+\newcommand{\sppvenue}{Del Carmen, Siargao Island,}
 %\newcommand{\sppvenue}{City, }
-\newcommand{\sppdate}{19--21 October 2022}
+\newcommand{\sppdate}{19--21 July 2023}
 
 
 % title style
