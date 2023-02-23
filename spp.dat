@@ -18,7 +18,7 @@
 
 % SPP details
 \newcommand{\spp}{41\textsuperscript{st}}
-\newcommand{\sppvenue}{Del Carmen, Siargao Island,}
+\newcommand{\sppvenue}{Del Carmen, Siargao Island, }
 %\newcommand{\sppvenue}{City, }
 \newcommand{\sppdate}{19--21 July 2023}
 
