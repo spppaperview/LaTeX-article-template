@@ -17,10 +17,10 @@
 \topmargin=-2cm
 
 % SPP details
-\newcommand{\spp}{41\textsuperscript{st}}
-\newcommand{\sppvenue}{Del Carmen, Siargao Island, }
+\newcommand{\spp}{42\textsuperscript{nd}}
+\newcommand{\sppvenue}{Batangas State University, Batangas City, }
 %\newcommand{\sppvenue}{City, }
-\newcommand{\sppdate}{19--21 July 2023}
+\newcommand{\sppdate}{03--06 July 2024}
 
 
 % title style
@@ -101,7 +101,8 @@
 \fancyhf[c]{ }
 \fancyhf[r]{ }
 \fancyfoot[l]{}
-\fancyfoot[c]{\href{https://proceedings.spp-online.org/issue/archive}{Proceedings of the Samahang Pisika ng Pilipinas} \\ \href{https://proceedings.spp-online.org/issue/view/SPP-2022}{\spp\,Samahang Pisika ng Pilipinas Physics Conference}\\ \sppvenue \sppdate \\ \articlenum 1}
+\fancyfoot[c]{\href{https://proceedings.spp-online.org/issue/archive}{Proceedings of the Samahang Pisika ng Pilipinas}
+\\ \href{https://proceedings.spp-online.org/issue/view/SPP-2024}{\spp\,Samahang Pisika ng Pilipinas Physics Conference}\\ \sppvenue \sppdate \\ \articlenum 1}
 \fancyfoot[r]{}
 }
 
@@ -112,7 +113,8 @@
 \fancyhf[r]{}
 \fancyhf[c]{}
 \fancyfoot[l]{}
-\fancyfoot[c]{\href{https://proceedings.spp-online.org/issue/archive}{Proceedings of the Samahang Pisika ng Pilipinas}  \\ \href{https://proceedings.spp-online.org/issue/view/SPP-2022}{\spp\,Samahang Pisika ng Pilipinas Physics Conference}\\ \sppvenue \sppdate \\ \articlenum \thepage}
+\fancyfoot[c]{\href{https://proceedings.spp-online.org/issue/archive}{Proceedings of the Samahang Pisika ng Pilipinas} 
+\\ \href{https://proceedings.spp-online.org/issue/view/SPP-2024}{\spp\,Samahang Pisika ng Pilipinas Physics Conference}\\ \sppvenue \sppdate \\ \articlenum \thepage}
 \fancyfoot[r]{}
 \pagestyle{fancy}
 
