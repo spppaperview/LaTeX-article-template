@@ -1299,19 +1299,72 @@ FUNCTION {manual}
   fin.entry
 }
 
-FUNCTION {mastersthesis}
+FUNCTION {format.school}
+{ 't :=
+  ""
+      add.blank "(" *
+      t empty$
+        { school "school" bibinfo.check *
+        }
+        { t *
+          school empty$
+            'skip$
+            { ", " * school "school" bibinfo.check * }
+          if$
+        }
+      if$
+      year duplicate$ empty$
+        { "empty year in " cite$ * "; set to ????" * warning$
+           pop$ "????" }
+        { "year" bibinfo.check extra.label * }
+      if$
+      t empty$ school empty$ and
+        { * }
+        { ", " swap$ * * }
+      if$
+      ")" *
+}
+
+FUNCTION {bsthesis}
 { output.bibitem
   format.authors "author" output.check
-  author format.key output
-  bbl.mthesis format.thesis.type output.nonnull
-  school "school" bibinfo.warn output
-  address "address" bibinfo.check output
-  format.date "year" output.check
-  format.note output
-  format.eprint output
-  format.url output
-  fin.entry
+  format.title "title" output.check
+	bbl.bsthesis format.school output
+	format.note output
+	fin.entry
 }
+
+FUNCTION {msthesis}
+{ output.bibitem
+  format.authors "author" output.check
+  format.title "title" output.check
+	bbl.msthesis format.school output
+  format.note output
+	fin.entry
+}
+
+FUNCTION {phddissertation}
+{ output.bibitem
+  format.authors "author" output.check
+  format.title "title" output.check
+	bbl.phddissertation format.school output
+  format.note output
+	fin.entry
+}
+
+%% FUNCTION {mastersthesis}
+%% { output.bibitem
+%%  format.authors "author" output.check
+%%  author format.key output
+%%  bbl.mthesis format.thesis.type output.nonnull
+%%  school "school" bibinfo.warn output
+%%  address "address" bibinfo.check output
+%%  format.date "year" output.check
+%%  format.note output
+%%  format.eprint output
+%%  format.url output
+%%  fin.entry
+%% }
 
 FUNCTION {misc}
 { output.bibitem
@@ -1325,19 +1378,20 @@ FUNCTION {misc}
   format.url output
   fin.entry
 }
-FUNCTION {phdthesis}
-{ output.bibitem
-  format.authors "author" output.check
-  author format.key output
-  bbl.phdthesis format.thesis.type output.nonnull
-  school "school" bibinfo.warn output
-  address "address" bibinfo.check output
-  format.date "year" output.check
-  format.note output
-  format.eprint output
-  format.url output
-  fin.entry
-}
+
+%% FUNCTION {phdthesis}
+%% { output.bibitem
+%%   format.authors "author" output.check
+%%   author format.key output
+%%   bbl.phdthesis format.thesis.type output.nonnull
+%%   school "school" bibinfo.warn output
+%%   address "address" bibinfo.check output
+%%   format.date "year" output.check
+%%   format.note output
+%%   format.eprint output
+%%   format.url output
+%%   fin.entry
+%% }
 
 FUNCTION {proceedings}
 { output.bibitem
