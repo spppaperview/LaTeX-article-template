@@ -280,11 +280,20 @@ FUNCTION {bbl.chapter}
 FUNCTION {bbl.techrep}
 { "Tech. Rep." }
 
-FUNCTION {bbl.mthesis}
-{ "Master's thesis" }
+%% FUNCTION {bbl.mthesis}
+%% { "Master's thesis" }
+%% 
+%% FUNCTION {bbl.phdthesis}
+%% { "Ph.D. thesis" }
 
-FUNCTION {bbl.phdthesis}
-{ "Ph.D. thesis" }
+FUNCTION {bbl.bsthesis}
+{ "BS Thesis" }
+
+FUNCTION {bbl.msthesis}
+{ "MS Thesis" }
+
+FUNCTION {bbl.phddissertation}
+{ "PhD Dissertation" }
 
 FUNCTION {bbl.first}
 { "1st" }
