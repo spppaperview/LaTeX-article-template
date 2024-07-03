@@ -539,23 +539,7 @@ FUNCTION {format.editors}
     }
   if$
 }
-FUNCTION {format.isbn}
-{ isbn "isbn" bibinfo.check
-  duplicate$ empty$ 'skip$
-    {
-      "ISBN " swap$ *
-    }
-  if$
-}
 
-FUNCTION {format.issn}
-{ issn "issn" bibinfo.check
-  duplicate$ empty$ 'skip$
-    {
-      "ISSN " swap$ *
-    }
-  if$
-}
 
 FUNCTION {format.note}
 {
@@ -930,7 +914,7 @@ FUNCTION {doilink}
 { pop$ "" }
 { doi empty$
     { skip$ }
-    { "\href{https://dx.doi.org/" doi * "}{" * swap$ * "}" * }
+    { "\href{https://doi.org/" doi * "}{" * swap$ * "}" * }
   if$
 }
 if$
@@ -1127,8 +1111,7 @@ FUNCTION {article}
       format.pages output
     }
   if$
-	format.issn output
-  format.note output
+	format.note output
   format.eprint output
   fin.entry
 }
@@ -1158,7 +1141,6 @@ FUNCTION {book}
     }
   if$
   format.edition output
-  format.isbn output
   format.note output
   format.eprint output
   format.url output
@@ -1172,7 +1154,6 @@ FUNCTION {booklet}
   howpublished "howpublished" bibinfo.check output
   address "address" bibinfo.check output
   format.date "year" output.check
-  format.isbn output
   format.note output
   format.eprint output
   format.url output
@@ -1208,7 +1189,7 @@ FUNCTION {inbook}
   if$
   format.edition output
   crossref missing$
-    { format.isbn output }
+    { }
     'skip$
   if$
   format.note output
@@ -1228,7 +1209,6 @@ FUNCTION {incollection}
       format.number.series output
       format.chapter.pages output
       format.edition output
-      format.isbn output
     }
     { format.incoll.inproc.crossref output.nonnull
       format.chapter.pages output
@@ -1255,8 +1235,6 @@ FUNCTION {inproceedings}
       format.bvolume output
       format.number.series output
       format.pages output
-      format.isbn output
-      format.issn output
     }
     { format.incoll.inproc.crossref output.nonnull
       format.pages output
@@ -1336,8 +1314,6 @@ FUNCTION {proceedings}
       format.publisher.address output
     }
   if$
-  format.isbn output
-  format.issn output
   format.note output
   format.eprint output
   format.url output
