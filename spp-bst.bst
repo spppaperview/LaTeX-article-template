@@ -1169,43 +1169,72 @@ FUNCTION {booklet}
   fin.entry
 }
 
+
 FUNCTION {inbook}
 { output.bibitem
-  author empty$
-    { format.editors "author and editor" output.check
-      editor format.key output
-    }
-    { format.authors output.nonnull
-      crossref missing$
-        { "author and editor" editor either.or.check }
-        'skip$
+  format.authors "author" output.check
+    format.title "title" output.check
+  author format.key output
+  crossref missing$
+    { format.in.ed.booktitle "booktitle" output.check 
+      publisher empty$
+        { format.organization.address output }
+        { organization "organization" bibinfo.check output
+          format.publisher.address output
+        }
       if$
-    }
-  if$
-  format.btitle "title" output.check
-  crossref missing$
-    {
-      format.publisher.address output
       format.bvolume output
-      format.chapter.pages "chapter and pages" output.check
       format.number.series output
+      format.pages output
     }
-    {
-      format.chapter.pages "chapter and pages" output.check
-      format.book.crossref output.nonnull
-      format.date "year" output.check
+    { format.incoll.inproc.crossref output.nonnull
+      format.pages output
     }
-  if$
-  format.edition output
-  crossref missing$
-    { }
-    'skip$
   if$
   format.note output
   format.eprint output
   format.url output
   fin.entry
 }
+
+
+%% FUNCTION {inbook}
+%% { output.bibitem
+%%  author empty$
+%%    { format.editors "author and editor" output.check
+%%      editor format.key output
+%%    }
+%%  { format.authors output.nonnull
+%%      crossref missing$
+%%        { "author and editor" editor either.or.check }
+%%        'skip$
+%%      if$
+%%    }
+%%  if$
+%%  format.btitle "title" output.check
+%%  crossref missing$
+%%    {
+%%      format.publisher.address output
+%%      format.bvolume output
+%%      format.chapter.pages "chapter and pages" output.check
+%%      format.number.series output
+%%    }
+%%    {
+%%      format.chapter.pages "chapter and pages" output.check
+%%      format.book.crossref output.nonnull
+%%      format.date "year" output.check
+%%    }
+%%  if$
+%%  format.edition output
+%%  crossref missing$
+%%    { }
+%%    'skip$
+%%  if$
+%%  format.note output
+%%  format.eprint output
+%%  format.url output
+%%  fin.entry
+%%}
 
 FUNCTION {incollection}
 { output.bibitem
