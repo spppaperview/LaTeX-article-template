@@ -283,8 +283,8 @@ FUNCTION {bbl.techrep}
 %% FUNCTION {bbl.mthesis}
 %% { "Master's thesis" }
 %% 
-%% FUNCTION {bbl.phdthesis}
-%% { "Ph.D. thesis" }
+FUNCTION {bbl.phdthesis}
+{ "PhD Thesis" }
 
 FUNCTION {bbl.bsthesis}
 { "BS Thesis" }
@@ -1339,6 +1339,15 @@ FUNCTION {msthesis}
   format.authors "author" output.check
   format.title "title" output.check
 	bbl.msthesis format.school output
+  format.note output
+	fin.entry
+}
+
+FUNCTION {phdthesis}
+{ output.bibitem
+  format.authors "author" output.check
+  format.title "title" output.check
+	bbl.phdthesis format.school output
   format.note output
 	fin.entry
 }
