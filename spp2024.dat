@@ -17,10 +17,10 @@
 \topmargin=-2cm
 
 % SPP details
-\newcommand{\spp}{42\textsuperscript{nd}}
-\newcommand{\sppvenue}{Batangas State University, Batangas City, }
+\newcommand{\spp}{43\textsuperscript{rd}}
+\newcommand{\sppvenue}{University of the Philippines Diliman, Quezon City, }
 %\newcommand{\sppvenue}{City, }
-\newcommand{\sppdate}{3--6 July 2024}
+\newcommand{\sppdate}{25--28 June 2025}
 
 
 % title style
@@ -102,7 +102,7 @@
 \fancyhf[r]{ }
 \fancyfoot[l]{}
 \fancyfoot[c]{\href{https://proceedings.spp-online.org/issue/archive}{Proceedings of the Samahang Pisika ng Pilipinas}
-\\ \href{https://proceedings.spp-online.org/issue/view/SPP-2024}{\spp\,Samahang Pisika ng Pilipinas Physics Conference}\\ \sppvenue \sppdate \\ \articlenum 1}
+\\ \href{https://proceedings.spp-online.org/issue/view/SPP-2025}{\spp\,Samahang Pisika ng Pilipinas Physics Conference}\\ \sppvenue \sppdate \\ \articlenum 1}
 \fancyfoot[r]{}
 }
 
@@ -114,7 +114,7 @@
 \fancyhf[c]{}
 \fancyfoot[l]{}
 \fancyfoot[c]{\href{https://proceedings.spp-online.org/issue/archive}{Proceedings of the Samahang Pisika ng Pilipinas} 
-\\ \href{https://proceedings.spp-online.org/issue/view/SPP-2024}{\spp\,Samahang Pisika ng Pilipinas Physics Conference}\\ \sppvenue \sppdate \\ \articlenum \thepage}
+\\ \href{https://proceedings.spp-online.org/issue/view/SPP-2025}{\spp\,Samahang Pisika ng Pilipinas Physics Conference}\\ \sppvenue \sppdate \\ \articlenum \thepage}
 \fancyfoot[r]{}
 \pagestyle{fancy}
 
