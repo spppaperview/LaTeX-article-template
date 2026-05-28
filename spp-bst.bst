@@ -77,6 +77,7 @@ ENTRY
     publisher
     school
     series
+    sppurl
     title
     type
     url
@@ -904,6 +905,19 @@ FUNCTION {format.pages}
       tie.or.space.prefix
       "pages" bibinfo.check
       * *
+      % === injection link ===
+       doi empty$
+        { % DOI is empty -> Check if sppurl is available
+          sppurl empty$
+            { } % Both are empty -> do nothing
+            { "\href{" sppurl * "}{" * swap$ * "}" * }
+          if$
+        }
+        { % DOI is present -> Format as a secure doi.org URL
+          "\href{https://doi.org/" doi * "}{" * swap$ * "}" *
+        }
+      if$
+      % =============================
     }
   if$
 }
