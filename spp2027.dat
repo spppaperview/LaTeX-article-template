@@ -12,16 +12,20 @@
 \usepackage[affil-sl]{authblk} 			% found in preprint bundle package, http://ctan.org/pkg/preprint
 \usepackage[margin=2.5cm]{geometry} % paper and margin formats as set by SPP
 \usepackage{subfig}
+\usepackage{xcolor}
+
+% Define a custom dark blue
+\definecolor{darkblue}{rgb}{0.0, 0.0, 0.55}
 
 \parindent 0.5cm    % paragraphs indent
 \topmargin=-2cm
 
 % SPP details
-\newcommand{\spp}{44\textsuperscript{th}}
-\newcommand{\sppvenue}{University of the Philippines Los Ba\~nos, Laguna, }
-%\newcommand{\sppvenue}{City, }
-\newcommand{\sppdate}{17--20 June 2026}
-
+\newcommand{\spp}{45\textsuperscript{th}}
+\newcommand{\sppvolume}{45}
+\newcommand{\sppyear}{2027}
+\newcommand{\sppvenue}{Iloilo International Convention Center, Iloilo City, Philippines}
+\newcommand{\sppdate}{XX--YY June 2027}
 
 % title style
 \newcommand*{\TitleFont}{\bfseries \Large }
@@ -95,15 +99,16 @@
 \usepackage{fancyhdr}
 \fancypagestyle{titlestyle}
 {
-\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0.1pt}
 \renewcommand{\footrulewidth}{0.1pt}
-\fancyhf[l]{}
+\fancyhf[l]{\href{https://proceedings.spp-online.org/issue/archive}{\scshape 
+\textcolor{darkblue}{Proceedings of the Samahang Pisika ng Pilipinas}}}
 \fancyhf[c]{ }
-\fancyhf[r]{ }
-\fancyfoot[l]{}
-\fancyfoot[c]{\href{https://proceedings.spp-online.org/issue/archive}{Proceedings of the Samahang Pisika ng Pilipinas}
-\\ \href{https://proceedings.spp-online.org/issue/view/SPP-2026}{\spp\,Samahang Pisika ng Pilipinas Physics Conference}\\ \sppvenue \sppdate \\ \articlenum 1}
-\fancyfoot[r]{}
+\fancyhf[r]{{\scshape 
+\href{https://proceedings.spp-online.org/issue/view/SPP-\sppyear}{\textcolor{darkblue}{Volume~\sppvolume}}}}
+\fancyfoot[l]{\href{https://proceedings.spp-online.org/issue/view/SPP-\sppyear}{\textcolor{darkblue}{Proceedings of the \spp\,Samahang Pisika ng Pilipinas Physics Conference}}\\ \textcolor{darkblue}{\sppvenue \\ \sppdate} }
+\fancyfoot[c]{ }
+\fancyfoot[r]{\href{https://proceedings.spp-online.org/issue/view/SPP-\sppyear}{\textcolor{darkblue}{\articlenum}}}
 }
 
 % styling for the second page onwards
@@ -112,11 +117,24 @@
 \fancyhf[l]{}
 \fancyhf[r]{}
 \fancyhf[c]{}
-\fancyfoot[l]{}
-\fancyfoot[c]{\href{https://proceedings.spp-online.org/issue/archive}{Proceedings of the Samahang Pisika ng Pilipinas} 
-\\ \href{https://proceedings.spp-online.org/issue/view/SPP-2026}{\spp\,Samahang Pisika ng Pilipinas Physics Conference}\\ \sppvenue \sppdate \\ \articlenum \thepage}
-\fancyfoot[r]{}
+\fancyfoot[l]{\href{https://proceedings.spp-online.org/issue/view/SPP-\sppyear}{\textcolor{darkblue}{Proceedings of the \spp\,Samahang Pisika ng Pilipinas Physics Conference}}\\ \textcolor{darkblue}{\sppvenue\\ \sppdate} }
+\fancyfoot[c]{ }
+\fancyfoot[r]{\href{https://proceedings.spp-online.org/issue/view/SPP-\sppyear}{\textcolor{darkblue}{\articlenum-\thepage}}}
 \pagestyle{fancy}
+
+% styling for the second page onwards
+\fancypagestyle{lastpagestyle}
+{
+\renewcommand{\headrulewidth}{0.1pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\fancyhf[l]{ }
+\fancyhf[c]{ }
+\fancyhf[r]{ }
+\fancyfoot[l]{\href{https://proceedings.spp-online.org/issue/view/SPP-\sppyear}{\textcolor{darkblue}{Proceedings of the \spp\,Samahang Pisika ng Pilipinas Physics Conference}}\\ \textcolor{darkblue}{\sppvenue \\ \sppdate} }
+\fancyfoot[c]{ }
+\fancyfoot[r]{\href{https://proceedings.spp-online.org/issue/view/SPP-\sppyear}{\textcolor{darkblue}{\articlenum-\thepage}}\\\quad \\ \href{https://proceedings.spp-online.org/cla}{\textcolor{darkblue}{\copyright~\sppyear~The Authors}}}
+}
+
 
 % other packages and macros
 \usepackage{bm}
