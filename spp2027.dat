@@ -24,7 +24,7 @@
 \newcommand{\spp}{45\textsuperscript{th}}
 \newcommand{\sppvolume}{45}
 \newcommand{\sppyear}{2027}
-\newcommand{\sppvenue}{Iloilo International Convention Center, Iloilo City, Philippines}
+\newcommand{\sppvenue}{ZZZ Venue, Iloilo City, Philippines}
 \newcommand{\sppdate}{XX--YY June 2027}
 
 % title style
